@@ -12,13 +12,14 @@ img {
 }
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body {
     min-height: 100vh;
     font-family: 'Poppins';
     background-color: var(--primary-clr);
     color: white;
-    overflow-x: none;
+    overflow-x: hidden;
 }
 ul {
     list-style: none;
