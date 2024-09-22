@@ -1,0 +1,328 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-clr: #7bf1a8;
+    --dark-clr: black;
+}
+img {
+    width: 100%;
+}
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body {
+    min-height: 100vh;
+    font-family: 'Poppins';
+    background-color: var(--primary-clr);
+    color: white;
+    overflow-x: hidden;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+header {
+    background-color: var(--dark-clr);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-bottom: 3px solid #7bf1a8;
+}
+header .logo {
+    text-align: center;
+}
+header .logo span {
+    font-size: 2.5rem;
+}
+header .logo a {
+    font-family: 'Racing Sans One';
+    font-size: 3.5rem;
+    line-height: 1;
+}
+a.cta {
+    background-color: var(--primary-clr);
+    margin: 10px;
+    border-radius: 5px;
+    color: var(--dark-clr);
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 0 15px var(--primary-clr), 0 0 25px var(--primary-clr), 0 0 35px var(--primary-clr);
+    transition: all 250ms ease-in-out;
+    animation: glow 1s infinite alternate;
+}
+
+a.cta:hover {
+    background-color: var(--primary-clr);
+    box-shadow: 0 0 10px var(--primary-clr), 0 0 20px var(--primary-clr), 0 0 20px var(--primary-clr);
+    color: white;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px var(--primary-clr), 0 0 5px var(--primary-clr), 0 0 7px var(--primary-clr);
+    }
+    to {
+        box-shadow: 0 0 7px var(--primary-clr), 0 0 12px var(--primary-clr), 0 0 35px var(--primary-clr);
+    }
+}
+
+header .navbar ul {
+    display: flex;
+    margin-top: 20px;
+    gap: 1rem;
+}
+header .navbar ul li a {
+    border: 2px solid #7bf1a8;
+    border-radius: 5px;
+    padding: 5px;
+    transition: all .2s ease-in-out;
+    font-weight: 500;
+    scroll-behavior: smooth;
+}
+header .navbar ul li a:hover {
+    opacity: .8;
+}
+/* Hero */
+.hero2 {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+/* About */
+.about {
+    padding: 4rem 0;
+    background-color: var(--dark-clr);
+    border-bottom: 3px solid var(--primary-clr);
+}
+.about span {
+    color: var(--primary-clr);
+}
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 3rem;
+    padding: 0 20px;
+}
+.about-grid img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.about-grid h1 {
+    font-family: 'Racing Sans One';
+    letter-spacing: 3px;
+}
+a.resume {
+    border: 2px solid var(--primary-clr);
+    color: white!important;
+    margin: 10px;
+    border-radius: 5px;
+    color: var(--dark-clr);
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+a.resume:hover {
+    opacity: .8;
+}
+
+/* Gallery */
+
+.gallery {
+    text-align: center;
+    background-color: var(--dark-clr);
+    padding: 5px;
+    border-top: 3px solid var(--primary-clr);
+}
+.gallery .container {
+    max-width: 99%;
+}
+.gallery h2 {
+    font-family: 'Racing Sans One', serif;
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+    padding: 2rem 0;
+}
+.grid-gallery {
+    display: grid;
+    gap: 3px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid var(--primary-clr);
+    padding-bottom: 4px;
+}
+.grid-gallery .bg-image {
+    background: url('https://images.unsplash.com/photo-1614383686435-dd60cf22aae7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c21hbGx8ZW58MHx8MHx8fDA%3D') center center/cover no-repeat;
+    width: 100%;
+    height: 300px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.grid-gallery .bg-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #7bf1a8;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.grid-gallery .bg-image:hover::before {
+    opacity: 0.6;
+}
+.grid-gallery p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Racing Sans One', serif;
+    font-size: 2rem;
+    transition: all .3s ease;
+    opacity: 0;
+}
+.grid-gallery .bg-image:hover p {
+    opacity: 1;
+}
+
+/* Lego Image */
+.the-lego {
+    border-top: 1px solid var(--primary-clr);
+    background-color: var(--dark-clr);
+}
+.the-lego h1 {
+    text-align: center;
+    font-family: 'Racing Sans One';
+    letter-spacing: 2px;
+    padding: 2rem 0;
+    font-size: 3rem;
+}
+.lego-container-top {
+    margin: 0 auto;
+    max-width: 90%;
+}
+.the-lego .lego-container-top img {
+    display: block;
+    margin: 0 auto;
+    max-width: 60%;
+    border: 5px solid var(--primary-clr);
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+.lego-container-top p {
+    color: var(--primary-clr)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 992px) {
+    .grid-gallery{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .grid-gallery {
+        grid-template-columns: 1fr 1fr;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 0 30px;
+    }
+    .about-grid img {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .grid-gallery {
+        grid-template-columns: 1fr;
+    }
+}
