@@ -166,6 +166,7 @@ button.next {
     display: grid;
     grid-template-columns: 1fr 3fr;
     gap: 3rem;
+    padding: 0 20px;
 }
 .about-grid img {
     width: 250px;
@@ -309,6 +310,14 @@ a.resume:hover {
 @media (max-width: 768px) {
     .grid-gallery {
         grid-template-columns: 1fr 1fr;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 0 30px;
+    }
+    .about-grid img {
+        margin: 0 auto;
     }
 }
 
